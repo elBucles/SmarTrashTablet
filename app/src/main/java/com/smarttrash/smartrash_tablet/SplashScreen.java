@@ -2,10 +2,8 @@ package com.smarttrash.smartrash_tablet;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.os.Handler;
 
 public class SplashScreen extends Activity {
 
@@ -19,7 +17,7 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        boolean b = new Handler().postDelayed(new Runnable() {
+        boolean a = new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
@@ -28,16 +26,14 @@ public class SplashScreen extends Activity {
                 finish();
 
             }
-        }, 3000);
+        }, 2000);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
     }
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+
 }

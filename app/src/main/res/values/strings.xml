@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">SmarTrash-Tablet</string>
     <string name="bienvenido_operador">Bienvenido Operador</string>
+
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="bienvenido_josue">Bienvenido Josúe</string>
+    <string name="ubique_su_identificacion_sobre_el_sensor_para_verificar_su_identidad">Ubique su identificación sobre el sensor para verificar su identidad.</string>
 </resources>
