@@ -16,11 +16,17 @@ public class Welcome extends Activity {
             @Override
             public void run() {
 
-                Intent intent =new Intent(Welcome.this, Maps.class);
-                startActivity(intent);
+                Intent sig =new Intent(Welcome.this, Maps.class);
+                startActivity(sig);
                 finish();
 
             }
         }, 2000);
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }

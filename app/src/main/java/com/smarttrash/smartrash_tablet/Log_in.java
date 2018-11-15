@@ -31,4 +31,10 @@ public class Log_in extends Activity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }

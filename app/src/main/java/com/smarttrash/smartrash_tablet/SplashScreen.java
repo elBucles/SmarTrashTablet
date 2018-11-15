@@ -21,8 +21,8 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
 
-                Intent intent =new Intent(SplashScreen.this, Log_in.class);
-                startActivity(intent);
+                Intent sig =new Intent(SplashScreen.this, Log_in.class);
+                startActivity(sig);
                 finish();
 
             }
@@ -35,5 +35,11 @@ public class SplashScreen extends Activity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
+
+    @Override
+    public void onBackPressed() {
+
+    }
+
 
 }
