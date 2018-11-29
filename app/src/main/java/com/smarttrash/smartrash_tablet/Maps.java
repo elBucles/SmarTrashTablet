@@ -71,7 +71,6 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
     GoogleMap map;
     Boolean actualPosition = true;
-    JSONObject jso;
     Double longitudOrigen, latitudOrigen;
 
     @Override
