@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/ubique_su_identificacion_sobre_el_sensor_para_verificar_su_identidad"
         android:textColor="@android:color/background_light"
-        android:textSize="30sp"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"

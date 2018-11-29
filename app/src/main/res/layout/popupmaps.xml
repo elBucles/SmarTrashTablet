@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_ut"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/id_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="28dp"
+        android:text="ID: 15"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/nombre_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/logo"
+        android:paddingLeft="5dp"
+        android:text="Cliente: UTSLRC"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/direccion_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombre_cliente"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/logo"
+        android:paddingLeft="5dp"
+        android:text="Dirección: Jalisco y 59" />
+
+    <TextView
+        android:id="@+id/tipo_residuo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/direccion_cliente"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/logo"
+        android:paddingLeft="5dp"
+        android:text="Tipos de residuo: Metal, Plástico" />
+
+
+</RelativeLayout>

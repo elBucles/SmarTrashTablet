@@ -3,6 +3,7 @@ package com.smarttrash.smartrash_tablet;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -10,6 +11,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -26,6 +30,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.maps.android.PolyUtil;
@@ -40,10 +45,13 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
@@ -60,7 +68,6 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
         }
     }
-
 
     GoogleMap map;
     Boolean actualPosition = true;
@@ -130,38 +137,9 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
                     CameraPosition cameraPosition = new CameraPosition.Builder()
                             .target(new LatLng(latitudOrigen,longitudOrigen))       //Sets the center
-                            .zoom(16)       //Sets the zoom
+                            .zoom(14)       //Sets the zoom
                             .build();       //Creates a CameraPosition from the builder
                     mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-
-                    String url ="https://maps.googleapis.com/maps/api/directions/json?origin="+latitudOrigen+","+longitudOrigen+"&destination=32.460777, -114.712233";
-
-                    RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-
-
-                            try {
-                                jso = new JSONObject(response);
-                                trazarRuta(jso);
-                                Log.i("jsonRuta: ", ""+response);
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                        }
-                    });
-
-                    queue.add(stringRequest);
-
                 }
             }
         });
@@ -178,39 +156,6 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
 
         LatLng vet = new LatLng(32.469521, -114.792080);
         mMap.addMarker(new MarkerOptions().position(vet).title("Veterinaria My Rancherita"));
-    }
-
-    private void trazarRuta(JSONObject jso) {
-
-        JSONArray jRoutes;
-        JSONArray jLegs;
-        JSONArray jSteps;
-
-        try {
-            jRoutes = jso.getJSONArray("routes");
-            for (int i=0; i<jRoutes.length();i++){
-
-                jLegs = ((JSONObject)(jRoutes.get(i))).getJSONArray("legs");
-
-                for (int j=0; j<jLegs.length();j++){
-
-                    jSteps = ((JSONObject)jLegs.get(j)).getJSONArray("steps");
-
-                    for (int k = 0; k<jSteps.length();k++){
-
-
-                        String polyline = ""+((JSONObject)((JSONObject)jSteps.get(k)).get("polyline")).get("points");
-                        Log.i("end",""+polyline);
-                        List<LatLng> list = PolyUtil.decode(polyline);
-                        map.addPolyline(new PolylineOptions().addAll(list).color(Color.BLUE).width(10));
-                    }
-                }
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
     }
 
     @Override
