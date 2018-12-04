@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SmarTrash-Tablet</string>
     <string name="bienvenido_operador">Bienvenido Operador</string>
 
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBT_uSdPxrmuIBi6jeyIJSCuD4mcs6Qq3g</string>
     <string name="title_activity_welcome">Welcome</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
