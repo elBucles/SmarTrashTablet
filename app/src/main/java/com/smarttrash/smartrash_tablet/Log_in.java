@@ -36,7 +36,7 @@ public class Log_in extends Activity {
             @Override
             public void onClick(View v) {
 
-                Intent sig = new Intent(Log_in.this, Welcome.class);
+                Intent sig = new Intent(Log_in.this, NoRutas.class);
                 startActivity(sig);
             }
         });
@@ -72,7 +72,7 @@ public class Log_in extends Activity {
             Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
             r.play();
-            Intent sig = new Intent(Log_in.this, Welcome.class);
+            Intent sig = new Intent(Log_in.this, NoRutas.class);
             startActivity(sig);
             finish();
         }
