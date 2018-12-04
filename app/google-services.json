@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "724837964256",
+    "firebase_url": "https://smarttrash-1b89d.firebaseio.com",
+    "project_id": "smarttrash-1b89d",
+    "storage_bucket": "smarttrash-1b89d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724837964256:android:6611cc81483958c6",
+        "android_client_info": {
+          "package_name": "com.example.acceso.smarttrash_cliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724837964256-utmp32i5n16lg94tncj9k95at74dmbnr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acceso.smarttrash_cliente",
+            "certificate_hash": "a9012ff211646ebe21c04390e5b520a5517ca234"
+          }
+        },
+        {
+          "client_id": "724837964256-klo0barip39q7qjn6g4pf5e6llv6244i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqo8RE4NUyXjNkT-S5omLl1FJwmlhPr8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724837964256-klo0barip39q7qjn6g4pf5e6llv6244i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724837964256:android:fbc6823690c1447d",
+        "android_client_info": {
+          "package_name": "com.smarttrash.smartrash_tablet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724837964256-6qku6ort807ha09iese249crgmj7q6r8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smarttrash.smartrash_tablet",
+            "certificate_hash": "52c5fa369463fd3870190b257b1c275595987b30"
+          }
+        },
+        {
+          "client_id": "724837964256-klo0barip39q7qjn6g4pf5e6llv6244i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqo8RE4NUyXjNkT-S5omLl1FJwmlhPr8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "724837964256-klo0barip39q7qjn6g4pf5e6llv6244i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:724837964256:android:5e2b1cc52531d949",
+        "android_client_info": {
+          "package_name": "smartech.smarttrashtesting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "724837964256-klo0barip39q7qjn6g4pf5e6llv6244i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgqo8RE4NUyXjNkT-S5omLl1FJwmlhPr8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
